@@ -1,0 +1,9 @@
+2024-09-05 15:23:08,191 - payment_api - INFO - Card payment processed for Lorraine Rippin
+2024-09-05 15:34:46,789 - payment_api - ERROR - Error processing card payment: (psycopg2.errors.UndefinedColumn) column "cvv" of relation "card_payments" does not exist
+LINE 1: ...T INTO card_payments (name, card_number, expires, cvv) VALUE...
+                                                             ^
+
+[SQL: INSERT INTO card_payments (name, card_number, expires, cvv) VALUES (%(name)s, %(card_number)s, %(expires)s, %(cvv)s)]
+[parameters: {'name': 'Lorraine', 'card_number': '$2b$12$o1QP.m2Co4eYnlfowcUafeqTbwG0Kr9rp8cwAiXxL4BYUwyBrxW06', 'expires': datetime.date(2028, 8, 1), 'cvv': '$2b$12$o4HGsD5pnzb8Np9O/WvhGOe.OcXLeTnLyzwRKMsNeaXsHJp3nmK5W'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-09-05 15:36:52,357 - payment_api - INFO - Card payment processed for Lorraine
